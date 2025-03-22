@@ -41,10 +41,10 @@ export default function Home() {
             
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mt-8 md:mt-12">
-              <Link href="/about" className="btn-action text-center">
+              <Link href="/about" className="btn-primary uppercase font-bold tracking-wider px-8 py-4 bg-accent text-primary-dark border-2 border-accent hover:bg-accent-light transition-all">
                 OUR MISSION
               </Link>
-              <Link href="/events" className="btn-outline-white text-center">
+              <Link href="/events" className="btn-outline-white uppercase font-bold tracking-wider px-8 py-4 hover:bg-white/10 transition-all">
                 UPCOMING EVENTS
               </Link>
             </div>

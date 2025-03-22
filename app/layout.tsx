@@ -20,16 +20,16 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Delightful Bean Coffee Cart Rental",
-    default: "Delightful Bean Coffee Cart Rental | Tampa Bay, Florida",
+    template: "%s | Christian Men United",
+    default: "Christian Men United | Men of Integrity",
   },
-  description: "Premium coffee cart rental services for birthdays, weddings, and private parties in Tampa Bay, Florida. Book your barista service today!",
-  keywords: ["coffee cart rental", "barista service", "Tampa Bay", "Florida", "wedding coffee", "birthday coffee", "private party coffee", "mobile coffee cart"],
+  description: "Christian Men United is committed to building faithful communities of men through biblical teaching, fellowship, and service.",
+  keywords: ["Christian men", "men's ministry", "Bible study", "fellowship", "prayer", "men of integrity", "Christian leadership"],
   alternates: {
-    canonical: "https://delightfulbean.com",
+    canonical: "https://christianmenunited.org",
     languages: {
-      "en": "https://delightfulbean.com",
-      "x-default": "https://delightfulbean.com",
+      "en": "https://christianmenunited.org",
+      "x-default": "https://christianmenunited.org",
     },
   },
 };
