@@ -1,76 +1,83 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="bg-primary text-white">
-      <div className="container-custom py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Company Info */}
+    <footer className="bg-charcoal text-white/80">
+      <div className="container mx-auto max-w-7xl py-8 px-6 lg:px-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          {/* About column */}
           <div>
-            <div className="flex items-center mb-4">
-              <Image
-                src="/images/Delighfulbean.logo.png"
-                alt="Delightful Bean Logo"
-                width={40}
-                height={40}
-                className="mr-2 bg-white rounded-full p-1"
-              />
-              <span className="text-xl font-bold">Delightful Bean</span>
-            </div>
-            <p className="text-secondary-light mb-4">
-              Premium coffee cart rental services for birthdays, weddings, and private parties in Tampa Bay, Florida.
+            <h3 className="text-white text-lg font-medium mb-4">Christian Men United</h3>
+            <p className="text-sm mb-4">
+              Cultivating and sustaining unity within our congregations through God's Word.
             </p>
-            <p className="text-secondary-light">
-              <a href="tel:7274579941" className="hover:text-white transition-colors">
-                (727) 457-9941
+            <div className="flex space-x-4 mt-4">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+                </svg>
               </a>
-            </p>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+                </svg>
+              </a>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
+                </svg>
+              </a>
+            </div>
           </div>
-
-          {/* Services */}
+          
+          {/* Links column */}
           <div>
-            <h3 className="text-xl font-bold mb-4 text-white">Our Services</h3>
+            <h3 className="text-white text-lg font-medium mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/birthdays" className="text-secondary-light hover:text-white transition-colors">
-                  Birthday Coffee Cart
+                <Link href="/about" className="text-white/60 hover:text-white transition-colors text-sm">
+                  About Us
                 </Link>
               </li>
               <li>
-                <Link href="/weddings" className="text-secondary-light hover:text-white transition-colors">
-                  Wedding Coffee Cart
+                <Link href="/events" className="text-white/60 hover:text-white transition-colors text-sm">
+                  Events
                 </Link>
               </li>
               <li>
-                <Link href="/private-parties" className="text-secondary-light hover:text-white transition-colors">
-                  Private Party Coffee Cart
+                <Link href="/partners" className="text-white/60 hover:text-white transition-colors text-sm">
+                  Partners
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-secondary-light hover:text-white transition-colors">
-                  Book a Coffee Cart
+                <Link href="/prayer" className="text-white/60 hover:text-white transition-colors text-sm">
+                  Prayer
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="text-white/60 hover:text-white transition-colors text-sm">
+                  Contact
                 </Link>
               </li>
             </ul>
           </div>
-
-          {/* Location */}
+          
+          {/* Contact column */}
           <div>
-            <h3 className="text-xl font-bold mb-4 text-white">Service Area</h3>
-            <p className="text-secondary-light mb-2">
-              Proudly serving Tampa Bay, Florida and surrounding areas.
-            </p>
-            <Link href="/contact" className="btn btn-secondary inline-block mt-4">
-              Contact Us
-            </Link>
+            <h3 className="text-white text-lg font-medium mb-4">Contact</h3>
+            <address className="not-italic text-sm space-y-2">
+              <p className="text-white/60">123 Main Street</p>
+              <p className="text-white/60">Tampa, FL 33601</p>
+              <p className="text-white/60">info@christianmenunited.org</p>
+              <p className="text-white/60">(813) 555-1234</p>
+            </address>
           </div>
         </div>
 
-        <div className="border-t border-primary-light mt-8 pt-8 text-center text-secondary-light">
-          <p>&copy; {new Date().getFullYear()} Delightful Bean. All rights reserved.</p>
+        <div className="border-t border-white/10 mt-10 pt-8 text-center text-white/40 text-sm">
+          <p>&copy; {new Date().getFullYear()} Christian Men United. All Rights Reserved.</p>
         </div>
       </div>
     </footer>

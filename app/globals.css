@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --background: #FAFAFA;
-  --foreground: #333333;
+  --background: #F8F8F8;
+  --foreground: #2F3542;
 }
 
 body {
@@ -49,6 +49,12 @@ body {
   .btn-highlight {
     @apply bg-highlight text-white hover:bg-highlight-dark;
   }
+  .btn-outline-primary {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-white;
+  }
+  .btn-outline-accent {
+    @apply border-2 border-accent text-accent hover:bg-accent hover:text-white;
+  }
   .container-custom {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
@@ -57,6 +63,36 @@ body {
   }
   .card {
     @apply bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg;
+  }
+  .card-solid {
+    @apply rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg;
+  }
+  .card-primary {
+    @apply border-l-4 border-primary bg-white rounded-xl shadow-md overflow-hidden;
+  }
+  .card-accent {
+    @apply border-l-4 border-accent bg-white rounded-xl shadow-md overflow-hidden;
+  }
+  .card-fill-primary {
+    @apply bg-primary text-white rounded-xl shadow-md overflow-hidden;
+  }
+  .card-fill-accent {
+    @apply bg-accent text-white rounded-xl shadow-md overflow-hidden;
+  }
+  .card-fill-sand {
+    @apply bg-sand text-charcoal rounded-xl shadow-md overflow-hidden;
+  }
+  .card-fill-mint {
+    @apply bg-mint text-charcoal rounded-xl shadow-md overflow-hidden;
+  }
+  .hero-section {
+    @apply relative overflow-hidden py-20 md:py-32;
+  }
+  .decorated-heading {
+    @apply relative inline-block;
+  }
+  .decorated-heading::after {
+    @apply content-[''] absolute bottom-0 left-0 w-full h-1 bg-accent;
   }
 }
 

@@ -12,49 +12,66 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
-      <div className="container-custom py-4">
+    <header className="absolute w-full top-0 z-50 bg-gradient-to-b from-black/50 to-transparent py-4">
+      <div className="container-custom">
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <Image
-              src="/images/Delighfulbean.logo.png"
-              alt="Delightful Bean Logo"
-              width={50}
-              height={50}
-              className="mr-2"
-            />
-            <span className="text-2xl font-bold text-primary">Delightful Bean</span>
+            <div className="mr-4 text-3xl font-bold tracking-wider text-white">
+              <span className="text-white">C</span>
+              <span className="text-white">M</span>
+              <span className="text-accent">U</span>
+            </div>
+            <div className="hidden md:block">
+              <span className="text-xl font-medium tracking-wider text-white">CHRISTIAN MEN UNITED</span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
-            <Link href="/" className="font-bold text-lg text-black hover:text-primary transition-colors">
-              Home
-            </Link>
-            <Link href="/birthdays" className="font-bold text-lg text-black hover:text-primary transition-colors">
-              Birthdays
-            </Link>
-            <Link href="/weddings" className="font-bold text-lg text-black hover:text-primary transition-colors">
-              Weddings
-            </Link>
-            <Link href="/private-parties" className="font-bold text-lg text-black hover:text-primary transition-colors">
-              Private Parties
-            </Link>
-            <Link href="/pictures" className="font-bold text-lg text-black hover:text-primary transition-colors">
-              Pictures
-            </Link>
-            <Link href="/menu" className="font-bold text-lg text-black hover:text-primary transition-colors">
-              Menu
-            </Link>
-            <Link href="/contact" className="font-bold text-lg text-black hover:text-primary transition-colors">
-              Contact
-            </Link>
+          <nav className="hidden md:flex">
+            <div className="flex space-x-8">
+              <Link 
+                href="/" 
+                className="text-white hover:text-accent transition-colors text-sm uppercase tracking-wider"
+              >
+                Home
+              </Link>
+              <Link 
+                href="/about" 
+                className="text-white hover:text-accent transition-colors text-sm uppercase tracking-wider"
+              >
+                About Us
+              </Link>
+              <Link 
+                href="/events" 
+                className="text-white hover:text-accent transition-colors text-sm uppercase tracking-wider"
+              >
+                Events
+              </Link>
+              <Link 
+                href="/partners" 
+                className="text-white hover:text-accent transition-colors text-sm uppercase tracking-wider"
+              >
+                Partners
+              </Link>
+              <Link 
+                href="/prayer" 
+                className="text-white hover:text-accent transition-colors text-sm uppercase tracking-wider"
+              >
+                Prayer
+              </Link>
+              <Link 
+                href="/contact" 
+                className="text-white hover:text-accent transition-colors text-sm uppercase tracking-wider"
+              >
+                Contact
+              </Link>
+            </div>
           </nav>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-primary focus:outline-none"
+            className="md:hidden text-white focus:outline-none"
             onClick={toggleMenu}
             aria-label="Toggle menu"
           >
@@ -86,53 +103,46 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden mt-4 pb-4">
-            <nav className="flex flex-col space-y-4">
+          <div className="md:hidden mt-4 pb-4 bg-black/80 backdrop-blur-sm rounded-lg overflow-hidden">
+            <nav className="flex flex-col">
               <Link
                 href="/"
-                className="font-bold text-lg text-black hover:text-primary transition-colors"
+                className="px-4 py-3 text-white hover:text-accent border-b border-white/10"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
               </Link>
               <Link
-                href="/birthdays"
-                className="font-bold text-lg text-black hover:text-primary transition-colors"
+                href="/about"
+                className="px-4 py-3 text-white hover:text-accent border-b border-white/10"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Birthdays
+                About Us
               </Link>
               <Link
-                href="/weddings"
-                className="font-bold text-lg text-black hover:text-primary transition-colors"
+                href="/events"
+                className="px-4 py-3 text-white hover:text-accent border-b border-white/10"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Weddings
+                Events
               </Link>
               <Link
-                href="/private-parties"
-                className="font-bold text-lg text-black hover:text-primary transition-colors"
+                href="/partners"
+                className="px-4 py-3 text-white hover:text-accent border-b border-white/10"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Private Parties
+                Partners
               </Link>
               <Link
-                href="/pictures"
-                className="font-bold text-lg text-black hover:text-primary transition-colors"
+                href="/prayer"
+                className="px-4 py-3 text-white hover:text-accent border-b border-white/10"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Pictures
-              </Link>
-              <Link
-                href="/menu"
-                className="font-bold text-lg text-black hover:text-primary transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Menu
+                Prayer
               </Link>
               <Link
                 href="/contact"
-                className="font-bold text-lg text-black hover:text-primary transition-colors"
+                className="px-4 py-3 text-white hover:text-accent"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact
