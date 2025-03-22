@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --background: #F8F8F8;
-  --foreground: #2F3542;
+  --background: #FFFFFF;
+  --foreground: #0E1836;
 }
 
 body {
@@ -14,85 +14,115 @@ body {
 
 @layer base {
   h1 {
-    @apply text-4xl font-bold mb-6 text-primary;
+    @apply text-5xl md:text-6xl font-bold mb-6 text-white tracking-tight;
   }
   h2 {
-    @apply text-3xl font-bold mb-4 text-primary;
+    @apply text-3xl md:text-4xl font-bold mb-4 text-primary;
   }
   h3 {
-    @apply text-2xl font-semibold mb-3 text-primary;
+    @apply text-2xl font-bold mb-3 text-primary;
   }
   h4 {
-    @apply text-xl font-semibold mb-2 text-primary;
+    @apply text-xl font-bold mb-2 text-primary;
   }
   p {
-    @apply mb-4 text-charcoal;
+    @apply mb-4 text-charcoal leading-relaxed;
   }
   a {
-    @apply text-accent hover:text-accent-dark transition-colors;
+    @apply text-action hover:text-action-dark transition-colors;
   }
 }
 
 @layer components {
+  /* Buttons */
   .btn {
-    @apply px-6 py-3 rounded-lg font-semibold transition-all duration-200 inline-block;
+    @apply px-6 py-3 rounded-md font-bold text-base tracking-wide transition-all duration-200 inline-block;
   }
   .btn-primary {
-    @apply bg-primary text-white hover:bg-primary-dark;
+    @apply bg-primary text-white hover:bg-primary-light;
   }
   .btn-secondary {
     @apply bg-secondary text-primary hover:bg-secondary-dark;
   }
   .btn-accent {
-    @apply bg-accent text-white hover:bg-accent-dark;
+    @apply bg-accent text-primary-dark hover:bg-accent-dark;
   }
-  .btn-highlight {
-    @apply bg-highlight text-white hover:bg-highlight-dark;
+  .btn-action {
+    @apply bg-action text-white hover:bg-action-dark;
+  }
+  .btn-donate {
+    @apply bg-red text-white hover:bg-red-dark;
   }
   .btn-outline-primary {
     @apply border-2 border-primary text-primary hover:bg-primary hover:text-white;
   }
-  .btn-outline-accent {
-    @apply border-2 border-accent text-accent hover:bg-accent hover:text-white;
+  .btn-outline-white {
+    @apply border-2 border-white text-white hover:bg-white/20;
   }
+  .btn-outline-accent {
+    @apply border-2 border-accent text-primary hover:bg-accent hover:text-primary-dark;
+  }
+  
+  /* Layout */
   .container-custom {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
   .section {
-    @apply py-12 md:py-20;
+    @apply py-16 md:py-24;
   }
+  
+  /* Cards */
   .card {
-    @apply bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg;
+    @apply bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl;
   }
-  .card-solid {
-    @apply rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg;
-  }
-  .card-primary {
-    @apply border-l-4 border-primary bg-white rounded-xl shadow-md overflow-hidden;
+  .card-dark {
+    @apply bg-primary text-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl;
   }
   .card-accent {
-    @apply border-l-4 border-accent bg-white rounded-xl shadow-md overflow-hidden;
+    @apply border-t-4 border-accent bg-white rounded-lg shadow-md overflow-hidden;
   }
-  .card-fill-primary {
-    @apply bg-primary text-white rounded-xl shadow-md overflow-hidden;
+  .card-action {
+    @apply border-t-4 border-action bg-white rounded-lg shadow-md overflow-hidden;
   }
-  .card-fill-accent {
-    @apply bg-accent text-white rounded-xl shadow-md overflow-hidden;
-  }
-  .card-fill-sand {
-    @apply bg-sand text-charcoal rounded-xl shadow-md overflow-hidden;
-  }
-  .card-fill-mint {
-    @apply bg-mint text-charcoal rounded-xl shadow-md overflow-hidden;
-  }
+  
+  /* Sections */
   .hero-section {
-    @apply relative overflow-hidden py-20 md:py-32;
+    @apply relative min-h-[80vh] flex items-center overflow-hidden;
   }
-  .decorated-heading {
+  .section-primary {
+    @apply bg-primary text-white;
+  }
+  .section-secondary {
+    @apply bg-secondary;
+  }
+  .section-accent {
+    @apply bg-accent;
+  }
+  .section-navy-gray {
+    @apply bg-navy-gray text-white;
+  }
+  
+  /* Typography */
+  .heading-xl {
+    @apply text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight;
+  }
+  .heading-lg {
+    @apply text-4xl md:text-5xl font-bold tracking-tight;
+  }
+  .heading-md {
+    @apply text-3xl md:text-4xl font-bold;
+  }
+  .heading-sm {
+    @apply text-2xl md:text-3xl font-bold;
+  }
+  .heading-accent {
     @apply relative inline-block;
   }
-  .decorated-heading::after {
-    @apply content-[''] absolute bottom-0 left-0 w-full h-1 bg-accent;
+  .heading-accent::after {
+    @apply content-[''] absolute -bottom-2 left-0 w-16 h-1 bg-accent;
+  }
+  .heading-accent-center::after {
+    @apply content-[''] absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-accent;
   }
 }
 
