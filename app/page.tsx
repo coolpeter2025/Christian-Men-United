@@ -158,10 +158,10 @@ export default function Home() {
               <p className="text-primary-dark/80 mt-2">Join us and become part of a community that builds men of integrity.</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/events" className="btn-primary uppercase font-bold tracking-wider">
+              <Link href="/events" className="btn-primary uppercase font-bold tracking-wider px-8 py-4 bg-action text-white border-2 border-action hover:bg-action-light transition-all">
                 JOIN AN EVENT
               </Link>
-              <Link href="/donate" className="btn-red uppercase font-bold tracking-wider">
+              <Link href="/donate" className="btn-red uppercase font-bold tracking-wider px-8 py-4 bg-red text-white border-2 border-red hover:bg-red-light transition-all">
                 GIVE NOW
               </Link>
             </div>
